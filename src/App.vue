@@ -1,19 +1,19 @@
 <template>
   <div>
-    <h1>Daftar Kegiatan</h1>
+    <h1>Daftar Bacaan Komik</h1>
     <button @click="showAll = !showAll">
-      {{ showAll ? 'Tampilkan Belum Selesai' : 'Tampilkan Semua' }}
+      {{ showAll ? 'Tampilkan yang belum Dibaca' : 'Tampilkan Semua' }}
     </button>
     <ul>
       <li v-for="(activity, index) in filteredActivities" :key="index">
         <div class="activity-item">
           <input type="checkbox" v-model="activity.completed" />
           <span :class="{ completed: activity.completed }">{{ activity.text }}</span>
-          <button @click="cancelActivity(index)">Batal</button>
+          <button @click="cancelActivity(index)">Hapus</button>
         </div>
       </li>
     </ul>
-    <input v-model="newActivity" @keyup.enter="addActivity" placeholder="Tambahkan kegiatan" />
+    <input v-model="newActivity" @keyup.enter="addActivity" placeholder="Tambahkan buku komik" />
   </div>
 </template>
 
