@@ -1,6 +1,5 @@
 <template>
   <div>
-<<<<<<< HEAD
     <nav>
       <ul>
         <li><a href="#" @click="currentView = 'todos'">Todos</a></li>
